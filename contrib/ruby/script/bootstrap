@@ -4,6 +4,7 @@ set -e
 cd "$(dirname $0)"/..
 
 bundle check --path vendor/gems 2>&1 > /dev/null || {
+  rm Gemfile.lock
   bundle install --path vendor/gems "$@"
   bundle clean
 }
