@@ -7,6 +7,8 @@ if [ -d /usr/share/rbenv/shims ]; then
   export RBENV_VERSION="2.6.5"
 fi
 
+gem install bundler -v 1.17.3
+
 ruby -v
 bundle -v
 
